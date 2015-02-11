@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box; }
 
+html, body {
+  margin: 0;
+  padding: 0; }
+
 html {
   box-sizing: border-box;
   font-family: 'Open Sans'; }
@@ -20,6 +24,29 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   text-align: center;
   font-size: 46px; }
+
+header {
+  background-color: #333;
+  border-bottom: 1px solid #333;
+  line-height: 200px;
+  min-height: 200px; }
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; }
+
+.avatar {
+  position: relative;
+  border: 2px solid #fff;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  opacity: 0.9; }
+
+.name {
+  color: #fff;
+  text-transform: uppercase; }
 
 .content {
   max-width: 800px;
@@ -55,7 +82,10 @@ h1 {
   padding-right: 10px;
   width: 33.33333%; }
 
-.project_content {
-  background-color: #fff;
-  padding-left: 10px;
-  padding-right: 10px; }
+.project__content {
+  padding: 10px;
+  border-top: 2px solid #333; }
+
+.project__wrapper {
+  box-shadow: 1px 2px 5px 0px #898989;
+  background-color: #fff; }
