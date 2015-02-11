@@ -2,76 +2,94 @@
   <head>
     <title>Chris Dhanaraj</title>
     <link rel="stylesheet" href="/css/style.css" media="screen" title="style" charset="utf-8">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <script src="//use.typekit.net/jcq0bnk.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
 
-    <header>
-      <div class="header-content">
-        <img class="avatar" src="/images/header.jpg" />
-        <h1 class="name">Chris Dhanaraj</h1>
-      </div>
-    </header>
-    
-    <div class="content">
-
-
-
-      <div class="slides">
-        <div class="slide_navigation">
-          <a href="#">Projects</a>
-          <a href="#">About Me</a>
+    <div class="full-height">
+      <header class="header">
+        <div class="header__text">
+          <h1 class="header__name"><span class="header__name header__name--bold">chris</span>dhanaraj</h1>
         </div>
+        <p class="header__title">frontend developer</p>
 
-        <div class="slide active">
-
-          <div class="project">
-            <div class="project__wrapper">
-              <img src="/images/mean.jpg" />
-
-              <div class="project__content">
-                <h2>Project FAST</h2>
-                <p>A character creator/manager for a table-top system developed by Bret Stevens. Built ontop of the MEAN stack, a WIP.</p>
-
-                <p>Source: <a href="https://github.com/chrisdhanaraj/projectfast">Project FAST</a></p>
-                <p>Demo: WIP</p>
-              </div>
-            </div>
+        <div class="social">
+          <div class="social__item twitter">
+            <i class="fa fa-twitter"></i> Twitter
           </div>
 
-          <div class="project">
-            <div class="project__wrapper">
-              <img src="/images/js.jpg" />
-
-              <div class="project__content">
-                <h2>Flexy</h2>
-                <p>Kind of a fun diversion (but used for work) and an excuse to play with lodash. It's a system similar to jQuery Masonry - sets up a bunch of boxes according to a grid structure. The system is responsive, and prefers translate over left/top if supported.</p>
-
-                <p>Source: <a href="https://github.com/chrisdhanaraj/flexy">Flexy</a></p>
-                <p>Demo: <a href="http://chrisdhanaraj.github.io/flexy/">chrisdhanaraj.github.io/flexy</a>
-              </div>
-            </div>
+          <div class="social__item github">
+            <i class="fa fa-github"></i> GitHub
           </div>
 
-          <div class="project">
-            <div class="project__wrapper">
-              <img src="/images/js.jpg" />
-              <div class="project__content">
-                <h2>Video Analytics</h2>
-                <p>My first foray into customizing Google Analytics - this script sets up automatic event tracking of HTML5 and YouTube videos.</p>
-
-                <p>GitHub Repo: <a href="https://github.com/chrisdhanaraj/ga-html5-video">ga-html5-video</a></p>
-              </div>
-            </div>
+          <div class="social__item codepen">
+            <i class="fa fa-codepen"></i> Codepen
           </div>
-
         </div>
+      </header>
+    </div>
 
-      </div>
+    <div class="container">
+      <section class="content">
+        <h1 class="content__header">Recent<span class="content__header--bold">Projects</span></h1>
 
+        <article class="project">
+          <div class="project__content">
+            <h2 class="project__header">flexy.js</h2>
+            <p>A stab at writing a horizontal-filling grid-system (as opposed to jQuery Masonry’s vertical fill) and a chance to explore some base-level usage of the lodash library.</p>
+          </div>
+          <div class="project__source">
+            <div class="project__source-item">
+              <i class="fa fa-github"></i> Source
+            </div>
+            <div class="project__source-item">
+              <i class="fa fa-github"></i> Demo
+            </div>
+          </div>
+        </article>
 
+        <article class="project">
+          <div class="project__content">
+            <h2 class="project__header">ga-video.js</h2>
+            <p>My first foray into writing event tracking for Google Analytics. This snippet can be dropped into any website and will automatically setup video analytics for YouTube videos. I have a partner script that does the same for HTML5 vidoes (seen here).</p>
+          </div>
+          <div class="project__source">
+            <div class="project__source-item">
+              <i class="fa fa-github"></i> Source
+            </div>
+            <div class="project__source-item">
+              <i class="fa fa-github"></i> Demo
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content">
+        <h1 class="content__header">Upcoming<span class="content__header--bold">Projects</span></h1>
+
+        <article class="project">
+          <div class="project__content">
+            <h2 class="project__header">PROJECT FAST</h2>
+            <p>A MEAN app (though possibly under going a rewrite in React) that will become a character creator/manager for a table-top RPG developed by Bret Stevens.</p>
+          </div>
+          <div class="project__source">
+            <div class="project__source-item">
+              <i class="fa fa-github"></i> Source
+            </div>
+            <div class="project__source-item">
+              <i class="fa fa-github"></i> Demo
+            </div>
+          </div>
+        </article>
+      </section>
     </div>
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
