@@ -366,9 +366,11 @@ p {
 .scroll-down {
   position: absolute;
   bottom: 20px;
-  left: 50%; }
+  width: 100%;
+  text-align: center;
+  left: 0; }
   .scroll-down .fa {
-    display: block;
+    display: inline-block;
     height: 50px;
     padding-left: 17px;
     padding-right: 17px;
