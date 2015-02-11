@@ -318,6 +318,7 @@ td, th {
   padding: 0; }
 
 .full-height {
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -361,6 +362,29 @@ body {
 
 p {
   margin: 0; }
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%; }
+  .scroll-down .fa {
+    display: block;
+    height: 50px;
+    padding-left: 17px;
+    padding-right: 17px;
+    line-height: 50px;
+    font-size: 25px;
+    border: 1px solid #999;
+    color: #999;
+    border-radius: 58px;
+    -webkit-transition: all 0.5s;
+            transition: all 0.5s; }
+    .scroll-down .fa:hover {
+      cursor: pointer;
+      -webkit-transition: all 0.5s;
+              transition: all 0.5s;
+      border: 1px solid #333;
+      color: #333; }
 
 .header {
   width: 100%; }
@@ -469,3 +493,15 @@ p {
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto; }
+
+.footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #111;
+  color: #fff; }
+
+.contact__header {
+  font-weight: 300;
+  text-transform: uppercase; }
+  .contact__header--bold {
+    font-weight: 700; }

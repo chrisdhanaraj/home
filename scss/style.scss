@@ -10,6 +10,32 @@ p {
   margin: 0;
 }
 
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+
+  .fa {
+    display: block;
+    height: 50px;
+    padding-left: 17px;
+    padding-right: 17px;
+    line-height: 50px;
+    font-size: 25px;
+    border: 1px solid #999;
+    color: #999;
+    border-radius: 58px;
+    transition: all 0.5s;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.5s;
+      border: 1px solid #333;
+      color: #333;
+    }
+  }
+}
+
 .header{
   width: 100%;
 
@@ -119,5 +145,23 @@ p {
     padding-left: 0.5em;
     padding-right: 0.5em;
     flex: 0 1 auto;
+  }
+}
+
+.footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #111;
+  color: #fff;
+}
+
+.contact {
+  &__header {
+    font-weight: 300;
+    text-transform: uppercase;
+
+    &--bold {
+      font-weight: 700;
+    }
   }
 }
