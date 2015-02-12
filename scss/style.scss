@@ -6,8 +6,17 @@ body {
   font-family: "proxima-nova";
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 p {
   margin: 0;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .scroll-down {
@@ -86,12 +95,30 @@ p {
 
   &__item {
     text-transform: uppercase;
+    transition: color 0.25s;
+
+    &:hover {
+      transition: color 0.25s;
+    }
+
+    &.twitter:hover {
+      color: #55acee;
+    }
+
+    &.github:hover {
+      color: #f93;
+    }
+
+    &.codepen:hover {
+      color: #76DAFF;
+    }
   }
 }
 
 .container {
   max-width: 100%;
   margin: 0 auto;
+  padding-top: 2em;
   padding-bottom: 2em;
 
   @media (max-width: 720px) {
@@ -121,7 +148,7 @@ p {
 
 .project {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding-top: 1em;
   padding-bottom: 1em;
 
@@ -136,14 +163,27 @@ p {
   }
 
   &__source {
-    padding-left: 1em;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
     flex: 1;
     align-self: center;
+
+    @media (max-width: 615px) {
+      text-align: right;
+    }
+
+    @media (min-width: 615px) {
+      flex-direction: row;
+    }
   }
 
   &__source-item {
+    @media (max-width: 615px) {
+      padding-top: 0.25em;
+      padding-bottom: 0.25em;
+    }
+
     padding-left: 0.5em;
     padding-right: 0.5em;
     flex: 0 1 auto;
