@@ -360,8 +360,15 @@ body {
   position: relative;
   font-family: "proxima-nova"; }
 
+a {
+  text-decoration: none;
+  color: inherit; }
+
 p {
   margin: 0; }
+
+.bold {
+  font-weight: 700; }
 
 .scroll-down {
   position: absolute;
@@ -428,11 +435,23 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between; }
   .social__item {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    -webkit-transition: color 0.25s;
+            transition: color 0.25s; }
+    .social__item:hover {
+      -webkit-transition: color 0.25s;
+              transition: color 0.25s; }
+    .social__item.twitter:hover {
+      color: #55acee; }
+    .social__item.github:hover {
+      color: #f93; }
+    .social__item.codepen:hover {
+      color: #76DAFF; }
 
 .container {
   max-width: 100%;
   margin: 0 auto;
+  padding-top: 2em;
   padding-bottom: 2em; }
   @media (max-width: 720px) {
     .container {
@@ -456,10 +475,10 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 1em;
   padding-bottom: 1em; }
   .project__header {
@@ -472,7 +491,6 @@ p {
         -ms-flex: 2;
             flex: 2; }
   .project__source {
-    padding-left: 1em;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -481,6 +499,11 @@ p {
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
@@ -488,6 +511,16 @@ p {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
             align-self: center; }
+    @media (max-width: 615px) {
+      .project__source {
+        text-align: right; } }
+    @media (min-width: 615px) {
+      .project__source {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
   .project__source-item {
     padding-left: 0.5em;
     padding-right: 0.5em;
@@ -495,6 +528,10 @@ p {
     -webkit-flex: 0 1 auto;
         -ms-flex: 0 1 auto;
             flex: 0 1 auto; }
+    @media (max-width: 615px) {
+      .project__source-item {
+        padding-top: 0.25em;
+        padding-bottom: 0.25em; } }
 
 .footer {
   padding-top: 2em;
