@@ -366,6 +366,12 @@ a {
 
 p {
   margin: 0; }
+  p + p {
+    margin-top: 0.5em; }
+  p a {
+    color: #ff8100; }
+    p a:hover {
+      color: #cc6700; }
 
 .bold {
   font-weight: 700; }

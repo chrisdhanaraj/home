@@ -2,15 +2,10 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
-var usemin = require('gulp-usemin');
+var useref = require('gulp-useref');
 var uglify = require('gulp-uglify');
-var ngAnnotate = require('gulp-ng-annotate');
-var notify = require('gulp-notify');
-var notifier = require('node-notifier');
-var wiredep = require('wiredep').stream;
 
 gulp.task('browser-sync', function() {
-
   var files = [
     'index.html'
   ];
@@ -22,10 +17,6 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('wiredep', function() {
-
-});
-
 gulp.task('styles', function() {
   return gulp.src('./scss/**/*.scss')
     .pipe(sass())
@@ -34,21 +25,21 @@ gulp.task('styles', function() {
     .pipe(browserSync.reload({stream:true}));
 });
 
-gulp.task('notify-js', function() {
-  browserSync.reload();
-});
-
-gulp.task('usemin', function () {
-  return gulp.src('./*.html')
-    .pipe(usemin({
-      js: [ngAnnotate(), uglify()]
-    }))
-    .pipe(gulp.dest('dist/'));
-});
-
 gulp.task('default', ['styles', 'browser-sync'], function() {
   gulp.watch('scss/**/*.scss', ['styles']);
-  gulp.watch('js/**/*.js', ['notify-js']);
+  gulp.watch('js/**/*.js', browserSync.reload({stream: true}));
 });
 
-gulp.task('build', ['styles', 'usemin']);
+// if I were actually going to build out single assets
+// instead of using the CDN stuff
+
+gulp.task('build', function() {
+  var assets = useref.assets();
+
+  return gulp.src('app/*.html')
+    .pipe(assets)
+    .pipe(gulpif('*.js', uglify()))
+    .pipe(assets.restore())
+    .pipe(useref())
+    .pipe(gulp.dest('dist'));
+});
