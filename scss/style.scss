@@ -193,14 +193,14 @@ p {
   }
 
   &__source-item {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    flex: 0 1 auto;
+
     @media (max-width: 615px) {
       padding-top: 0.25em;
       padding-bottom: 0.25em;
     }
-
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    flex: 0 1 auto;
   }
 }
 
